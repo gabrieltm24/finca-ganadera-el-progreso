@@ -1,0 +1,469 @@
+/* ==========================
+   ESTILOS GENERALES
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo img{
+    width:130px;
+    height:auto;
+    display:block;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:50px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#000;
+    font-size:24px;
+    font-weight:700;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#FFD54F;
+}
+
+/* ==========================
+   BANNER
+========================== */
+
+.banner{
+    height:90vh;
+    background:url("img/banner.png") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:rgb(255, 255, 255);
+}
+
+.banner .contenido{
+    background:rgba(0,0,0,.5);
+    padding:10px;
+    border-radius:15px;
+}
+
+.banner h1{
+    font-size:50px;
+}
+
+.banner p{
+    font-size:22px;
+    margin:20px 0;
+}
+
+.btn{
+    display:inline-block;
+    background:#43A047;
+    color:white;
+    padding:12px 30px;
+    border-radius:8px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#2E7D32;
+}
+
+/* ==========================
+   SECCIONES
+========================== */
+
+section{
+    padding:70px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#2E7D32;
+    font-size:35px;
+}
+
+/* ==========================
+   NOSOTROS
+========================== */
+
+/*=================================
+NOSOTROS
+=================================*/
+
+.nosotros{
+    background:#f8f9fa;
+}
+
+.nosotros-contenedor{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+    margin:50px 0;
+}
+
+.nosotros-img img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.nosotros-texto h3{
+    color:#2E7D32;
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.nosotros-texto p{
+    text-align:justify;
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+.cajas{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.caja{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+    transition:.4s;
+    min-height:320px;
+}
+
+.caja:hover{
+    transform:translateY(-10px);
+}
+
+.caja h3{
+    color:#2E7D32;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.caja p{
+    text-align:justify;
+    line-height:1.8;
+}
+
+.caja ul{
+    list-style:none;
+    line-height:2;
+    font-size:17px;
+}
+
+.caja ul li{
+    margin-bottom:10px;
+}
+
+@media(max-width:900px){
+
+.nosotros-contenedor{
+grid-template-columns:1fr;
+}
+
+.cajas{
+grid-template-columns:1fr;
+}
+
+}
+/* ==========================
+   TARJETAS
+========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:scale(1.04);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+    color:#2E7D32;
+}
+
+.card p{
+    padding:0 15px 20px;
+}
+
+/* ==========================
+   GALERIA
+========================== */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:.4s;
+}
+
+.galeria img:hover{
+    transform:scale(1.08);
+}
+
+/* ==========================
+   CONTACTO
+========================== */
+
+.info{
+    margin-bottom:30px;
+}
+
+.info p{
+    margin:12px 0;
+    font-size:18px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+form input,
+form textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+form textarea{
+    height:150px;
+}
+
+form button{
+    background:#2E7D32;
+    color:white;
+    border:none;
+    padding:14px;
+    cursor:pointer;
+    border-radius:8px;
+    font-size:18px;
+}
+
+form button:hover{
+    background:#1B5E20;
+}
+
+iframe{
+    width:100%;
+    height:350px;
+    margin-top:30px;
+    border:0;
+    border-radius:10px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:#1B5E20;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* ==========================
+   BOTON SUBIR
+========================== */
+
+#arriba{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#2E7D32;
+    color:white;
+    border:none;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    cursor:pointer;
+    display:none;
+    font-size:20px;
+}
+
+#arriba:hover{
+    background:#1B5E20;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+nav ul li{
+    margin:12px 0;
+}
+
+.banner h1{
+    font-size:35px;
+}
+
+.banner p{
+    font-size:18px;
+}
+
+}
+
+.equipo{
+
+padding:80px 8%;
+
+background:#fff;
+
+}
+
+.equipo h2{
+
+text-align:center;
+
+color:#2E7D32;
+
+font-size:40px;
+
+margin-bottom:15px;
+
+}
+
+.subtitulo{
+
+text-align:center;
+
+margin-bottom:50px;
+
+color:#666;
+
+}
+
+.equipo-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.miembro{
+
+background:#f8f8f8;
+
+padding:20px;
+
+border-radius:15px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.12);
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.miembro:hover{
+
+transform:translateY(-10px);
+
+}
+
+.miembro img{
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+margin-bottom:20px;
+
+}
+
+.miembro h3{
+
+color:#2E7D32;
+
+}
+
+.miembro p{
+
+color:#666;
+
+}
